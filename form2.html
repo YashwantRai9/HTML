@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Form2</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #74ebd5;
+      outline: none;
+      box-shadow: 0 0 5px rgba(116,235,213,0.6);
+    }
+
+    .radio-group, .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button[type="submit"] {
+      background: #74ebd5;
+      color: #333;
+      font-weight: bold;
+    }
+
+    button[type="submit"]:hover {
+      background: #4fc3c7;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background: #f08080;
+      color: white;
+      font-weight: bold;
+    }
+
+    button[type="reset"]:hover {
+      background: #e04f4f;
+    }
+
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>subscription paln</h1>
+
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter name">
+      </div>
+
+      <div>
+        <label for="ph">Phone No.</label>
+        <input id="ph" type="tel" placeholder="Enter phone no.">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter email">
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" required>
+      </div>
+
+      <div>
+        <label for="dob">DOB</label>
+        <input id="dob" type="date" required>
+      </div>
+
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="radio-group">
+        <p><strong>Subscription Plan</strong></p>
+        <input id="basic" type="radio" name="plan" value="Basic">
+        <label for="basic">Basic</label>
+        
+        <input id="premium" type="radio" name="plan" value="Premium">
+        <label for="premium">Premium</label>
+        
+        <input id="VIP" type="radio" name="plan" value="VIP">
+        <label for="VIP">VIP</label>
+      </div>
+
+      <div class="checkbox-group">
+        <input id="terms" type="checkbox" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <div>
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="4" placeholder="Enter your comments here"></textarea>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
